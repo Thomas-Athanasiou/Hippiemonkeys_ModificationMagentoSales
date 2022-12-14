@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+    Thomas Athanasiou at Hippiemonkeys
+    Copyright (c) 2022 Hippiemonkeys (https://hippiemonkeys.com)
+    Hippiemonkeys_Core
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Hippiemonkeys_Core::base">
+                    <resource id="Hippiemonkeys_Core::config">
+                        <resource id="Hippiemonkeys_Modification::config">
+                            <resource id="Hippiemonkeys_ModificationMagentoSales::config" title="Magento Sales Modification" sortOrder="10" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

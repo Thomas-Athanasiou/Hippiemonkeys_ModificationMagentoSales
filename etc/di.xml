@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+    Thomas Athanasiou at Hippiemonkeys
+    Copyright (c) 2022 Hippiemonkeys Web Inteligence EE (https://hippiemonkeys.com)
+    Hippiemonkeys_ModificationMagentoSales
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSales" type="Hippiemonkeys\Core\Helper\Config\Section\Group\Sub">
+        <arguments>
+            <argument name="section" xsi:type="string">hippiemonkeys_modification</argument>
+            <argument name="group" xsi:type="string">magento_sales</argument>
+            <argument name="activeField" xsi:type="string">active</argument>
+            <argument name="parentConfig" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\General</argument>
+        </arguments>
+    </virtualType>
+    <type name="Hippiemonkeys\ModificationMagentoSales\Model\ResourceModel\Provider\MissingIdListProvider">
+        <arguments>
+            <argument name="config" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSales</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Sales\Model\ResourceModel\Provider\NotSyncedDataProvider">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="hippiemonkeysmodificationmagentosalesmissing" xsi:type="string">Hippiemonkeys\ModificationMagentoSales\Model\ResourceModel\Provider\MissingIdListProvider</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Sales\Model\ResourceModel\Provider\NotSyncedOrderDataProvider">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="hippiemonkeysmodificationmagentosalesmissing" xsi:type="string">Hippiemonkeys\ModificationMagentoSales\Model\ResourceModel\Provider\MissingIdListProvider</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>
