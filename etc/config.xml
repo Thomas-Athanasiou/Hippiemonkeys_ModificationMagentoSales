@@ -9,6 +9,8 @@
         <hippiemonkeys_modification>
             <magento_sales>
                 <active>1</active>
+                <order_grid_collection_active>1</order_grid_collection_active>
+                <missing_list_provider_active>1</missing_list_provider_active>
             </magento_sales>
         </hippiemonkeys_modification>
     </default>

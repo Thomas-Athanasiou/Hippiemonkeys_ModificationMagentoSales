@@ -13,9 +13,30 @@
             <argument name="parentConfig" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\General</argument>
         </arguments>
     </virtualType>
+    <virtualType name="Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSalesMissingListProvider" type="Hippiemonkeys\Core\Helper\Config\Section\Group\Sub">
+        <arguments>
+            <argument name="section" xsi:type="string">hippiemonkeys_modification</argument>
+            <argument name="group" xsi:type="string">magento_sales</argument>
+            <argument name="activeField" xsi:type="string">missing_list_provider_active</argument>
+            <argument name="parentConfig" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSales</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSalesOrderGridCollectionFilter" type="Hippiemonkeys\Core\Helper\Config\Section\Group\Sub">
+        <arguments>
+            <argument name="section" xsi:type="string">hippiemonkeys_modification</argument>
+            <argument name="group" xsi:type="string">magento_sales</argument>
+            <argument name="activeField" xsi:type="string">order_grid_collection_active</argument>
+            <argument name="parentConfig" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSales</argument>
+        </arguments>
+    </virtualType>
     <type name="Hippiemonkeys\ModificationMagentoSales\Model\ResourceModel\Provider\MissingIdListProvider">
         <arguments>
-            <argument name="config" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSales</argument>
+            <argument name="config" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSalesMissingListProvider</argument>
+        </arguments>
+    </type>
+    <type name="Hippiemonkeys\ModificationMagentoSales\Plugin\Model\ResourceModel\Order\OrderGridCollectionFilter">
+        <arguments>
+            <argument name="config" xsi:type="object">Hippiemonkeys\Modification\Helper\Config\Section\Group\MagentoSalesOrderGridCollectionFilter</argument>
         </arguments>
     </type>
     <type name="Magento\Sales\Model\ResourceModel\Provider\NotSyncedDataProvider">
