@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
     Thomas Athanasiou at Hippiemonkeys
-    Copyright (c) 2022 Hippiemonkeys (https://hippiemonkeys.com)
+    Copyright (c) 2023 Hippiemonkeys (https://hippiemonkeys.com)
     Hippiemonkeys_Core
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">

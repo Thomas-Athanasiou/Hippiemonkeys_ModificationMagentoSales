@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
     Thomas Athanasiou at Hippiemonkeys
-    Copyright (c) 2022 Hippiemonkeys Web Inteligence EE (https://hippiemonkeys.com)
+    Copyright (c) 2023 Hippiemonkeys Web Inteligence EE (https://hippiemonkeys.com)
     Hippiemonkeys_ModificationMagentoSales
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">

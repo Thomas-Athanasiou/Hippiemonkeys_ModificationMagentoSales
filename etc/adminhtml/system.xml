@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
     Thomas Athanasiou at Hippiemonkeys
-    Copyright (c) 2022 Hippiemonkeys (https://hippiemonkeys.com)
+    Copyright (c) 2023 Hippiemonkeys (https://hippiemonkeys.com)
     Hippiemonkeys_ShippingTaxydromiki
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
@@ -12,14 +12,23 @@
                 <field id="active" translate="label" type="select" sortOrder="0" showInDefault="1" canRestore="1">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="hippiemonkeys_modification/general/active">1</field>
+                    </depends>
                 </field>
                 <field id="order_grid_collection_active" translate="label" type="select" sortOrder="10" showInDefault="1" canRestore="1">
                     <label>Order Grid Collection Plugin Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="hippiemonkeys_modification/magento_sales/active">1</field>
+                    </depends>
                 </field>
                 <field id="missing_list_provider_active" translate="label" type="select" sortOrder="20" showInDefault="1" canRestore="1">
                     <label>Missing List Provider Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="hippiemonkeys_modification/magento_sales/active">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
