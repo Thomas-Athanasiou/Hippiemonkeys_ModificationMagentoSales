@@ -2,7 +2,7 @@
 <!--
     Thomas Athanasiou at Hippiemonkeys
     Copyright (c) 2023 Hippiemonkeys (https://hippiemonkeys.com)
-    Hippiemonkeys_ShippingTaxydromiki
+    Hippiemonkeys_ModificationMagentoSales
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
     <system>
@@ -25,6 +25,13 @@
                 </field>
                 <field id="missing_list_provider_active" translate="label" type="select" sortOrder="20" showInDefault="1" canRestore="1">
                     <label>Missing List Provider Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="hippiemonkeys_modification/magento_sales/active">1</field>
+                    </depends>
+                </field>
+                <field id="creditmemo_total_tax_modification_active" translate="label" type="select" sortOrder="30" showInDefault="1" canRestore="1">
+                    <label>Creditmemo Total Tax Modification Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
                         <field id="hippiemonkeys_modification/magento_sales/active">1</field>
